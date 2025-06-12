@@ -1,3 +1,10 @@
-# Buildev
+# Buildev # Projeto Termux Simplificado
 
-Sistema de build para Android e Web via Termux.
+Script para facilitar o desenvolvimento apk Android
+
+## Como usar
+
+1. No Termux, instale git se ainda não tiver:
+
+```bash
+pkg install git
