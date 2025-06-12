@@ -1,12 +1,13 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
-echo "Atualizando Termux e instalando dependências básicas..."
-
+# Atualizar pacotes básicos
 pkg update -y && pkg upgrade -y
-pkg install -y git wget unzip openjdk-17 gradle
 
-echo "Criando pasta para Android SDK..."
+# Baixar o menu_termux.sh do seu repositório (troque URL pelo real)
+curl -sLo ~/menu_termux.sh https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPO/main/menu_termux.sh
 
-mkdir -p ~/Android/Sdk
+# Dar permissão de execução
+chmod +x ~/menu_termux.sh
 
-echo "Pronto! Agora rode ./menu.sh para começar."
+# Rodar o menu
+bash ~/menu_termux.sh
