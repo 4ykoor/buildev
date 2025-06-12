@@ -79,26 +79,6 @@ EOF
   echo "Estrutura Android criada."
 }
 
-criar_estrutura_html() {
-  echo "Criando estrutura Web em $BASE_DIR/web_app..."
-  mkdir -p "$BASE_DIR/web_app"
-
-  cat > "$BASE_DIR/web_app/index.html" <<EOF
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>Projeto Web Termux</title>
-</head>
-<body>
-  <h1>Olá do Termux Web</h1>
-</body>
-</html>
-EOF
-
-  echo "Estrutura Web criada."
-}
-
 atualizar_termux() {
   pkg update && pkg upgrade -y
 }
@@ -108,16 +88,14 @@ while true; do
   echo "=== Menu Termux Simplificado ==="
   echo "1) Atualizar Termux"
   echo "2) Criar estrutura APK (Android)"
-  echo "3) Criar estrutura HTML (Web)"
-  echo "4) Sair"
+  echo "3) Sair"
   echo -n "Escolha uma opção: "
   read opc
 
   case $opc in
     1) atualizar_termux ;;
     2) criar_estrutura_apk ;;
-    3) criar_estrutura_html ;;
-    4) echo "Saindo..."; exit 0 ;;
+    3) echo "Saindo..."; exit 0 ;;
     *) echo "Opção inválida!"; sleep 1 ;;
   esac
 
